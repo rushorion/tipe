@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 R=float(input("Quel coefficient de réflexion du matériau?"))
 celerite=343
 frequence=float(input("Quelle frequence?"))
-Amplitude=float(input("Quelle amplitude"))
+Amplitude=float(input("Quelle amplitude?"))
 
 
 #modelisation piece, maillage
@@ -61,7 +61,7 @@ for n in range (len(t)-1):
 
 iter=int(input("Combien de temps différents observe-t-on?"))
 
-for k in range (iter-1):
+for k in range (iter):
     n=int(input("Quel indice temporel afficher?"))
     plt.imshow(S[n,:,:],extent=[0,L,0,l], origin='lower', cmap='RdBu_r',aspect='equal')
     plt.colorbar(label='Valeur du signal s')
